@@ -1,0 +1,88 @@
+[
+    {
+      "lender_name": "ANZ Standard",
+      "product": "SVR/Fixed",
+      "max_lvr": "80%, 95% (with LMI), 90% (no LMI) for professionals, 95% (no LMI) for special postcodes. Refer ANZ policy for terms.",
+      "var_ir": "P&I 6.14 - 6.28% ≤80% LVR, 6.09 - 6.19% ≤70% LVR, +0.07% - 0.25% for I/O",
+      "key": "ANZ"
+    },
+    {
+      "lender_name": "Bankwest Package",
+      "product": "Complete",
+      "max_lvr": "80%",
+      "var_ir": "P&I (Before escalation) 6.14% ≤80% LVR, 6.09% ≤70% LVR, 6.09% ≤60% LVR",
+      "key": "Bankwest"
+    },
+    {
+      "lender_name": "BOQ",
+      "product": "Clear Path",
+      "max_lvr": "70%",
+      "var_ir": "6.49% (P&I), 6.59% (IO)",
+      "key": "BOQ"
+    },
+  
+    {
+      "lender_name": "CBA (Commonwealth Bank)",
+      "product": "MAV Package",
+      "max_lvr": "80% (95% with LMI)",
+      "var_ir": "P&I (Before escalation) 6.39% ≤80% LVR, 6.34% ≤70% LVR, 6.34% ≤60% LVR",
+      "key": "CBA"
+    },
+    {
+      "lender_name": "Heritage Bank (Package)",
+      "product": "Home Advantage",
+      "max_lvr": "70%, Pre-approval purpose not acceptable unless linked to refinance equity cash-out. However, existing Heritage members can submit a preapproval.",
+      "var_ir": "6.04% (<$700k Loan), 5.99% (>$700k Loan), +0.30% for Interest Only",
+      "key": "Heritage"
+    },
+    {
+      "lender_name": "Westpac (Package)",
+      "product": "Premier Advantage",
+      "max_lvr": "70%, Refinance purpose not acceptable.",
+      "var_ir": "P&I 6.26% - 6.39% ≤70% LVR, 6.26% - 6.39% ≤60% LVR; +0.25% for I/O",
+      "key": "Westpac"
+    },
+    {
+      "lender_name": "NAB",
+      "product": "NAB Packaged Tailored Home Loan",
+      "max_lvr": "80%, The NAB Choice Package Home Loan is no longer available for sale from 23 February 2023 to NAB Broker customers unless they have an existing (and ongoing) NAB Choice Package established before that date.",
+      "var_ir": "P&I 6.34 - 6.59% ≤80% LVR, 6.29 - 6.54% ≤70% LVR, 6.29 - 6.54% ≤60% LVR, +0.17% - 0.45% for Interest Only ≤80% LVR",
+      "key": "NAB_Direct"
+    },
+    {
+      "lender_name": "St. George Bank (Package)",
+      "product": "Advantage",
+      "max_lvr": "70%, Refinance purpose not acceptable unless in conjunction with a purchase.",
+      "var_ir": "P&I 6.02 - 6.10% ≤70% LVR, 6.02 - 6.09% ≤60% LVR; +0.19 - 0.25% for I/O",
+      "key": "St_George"
+    },
+    {
+      "lender_name": "AAA Finance (Expat)",
+      "product": "Expat",
+      "max_lvr": "90% Max loan amount per location at 70% LVR: $3m Inner-city $3m Non-metro $3.5m Metro Max loan amount per location at 80% LVR: $2.5m Inner-city $2.5m Non-metro $3m Metro Max loan amount per location at 85% LVR: $1.75m Non-metro $2m Metro Max loan amount per location at 90% LVR: $2m Metro",
+      "var_ir": "≤ 70% LVR - 7.25% ≤ 75% LVR - 7.35% ≤ 80% LVR - 7.35% ≤ 85% LVR - 7.65% ≤ 90% LVR - 8.15% +0.40% if Interest Only (90% Max) +0.50% Jumbo Fee if Loan >2M to 3M (Max 80% LVR)",
+      "key": "AAA"
+    },
+    {
+      "lender_name": "MA Money Prime",
+      "product": "Prime",
+      "max_lvr": "80% Max. $2mil lending (metro)",
+      "var_ir": "Residential ≤ $2m: ≤ 65% LVR - 6.84%, ≤ 70% LVR - 6.94%, ≤ 75% LVR - 7.04%, ≤ 80% LVR - 7.04%; Residential ≤ $2m - 5m: ≤ 65% LVR - 7.74%, ≤ 70% LVR - 7.74%, ≤ 75% LVR - 7.74%; vacant land: ≤ 65% LVR - 8.34%, ≤ 70% LVR - 8.44%, ≤ 75% LVR - 8.54%; +0.15% for investment purpose; +0.20% for Loan size >$1.75m - $2m; +0.15% for Interest Only - 5 years; Interest Only 10 years (Prime Investor ≤ 80% LVR): 0.40%",
+      "key": "MA_Money"
+    },
+    {
+      "lender_name": "HSBC-SG",
+      "product": "Premier International",
+      "max_lvr": "AUD: 70% (10% reduction for non Singapore Residents), SGD: 60% (10% reduction for non Singapore Residents), Adelaide, Perth, Brisbane, Sydney, Melbourne ONLY",
+      "var_ir": "1M AUD VLR (4.06%) + 2.4% = 6.46% as at Mar 2025, 1M SGD SORA (2.89%) + 2.75% = 5.64% as at Feb 2025",
+      "key": "HSBC_SG"
+    },
+    {
+      "lender_name": "HSBC AU Basic (Expat)",
+      "product": "Home Value",
+      "max_lvr": "80%",
+      "var_ir": "P&I 5.94% <60% LVR, 5.99% <70% LVR, 6.04% <80% LVR; IO 6.19% <80% LVR",
+      "key": "HSBC"
+    }
+  ]
+  
