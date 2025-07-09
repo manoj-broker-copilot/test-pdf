@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+  app:
+    build:
+      context: .
+      target: development   # Use a dev stage in Dockerfile
+    image: brokercopilot-backend-dev
+    container_name: nest-app-dev
+    env_file:
+      - .env
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+      - /app/node_modules  # Prevent overwriting node_modules with host
+    command: npm run start:dev
+    extra_hosts:
+      - "host.docker.internal:host-gateway"

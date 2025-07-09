@@ -9,7 +9,23 @@ export class PdfService {
   async generateTestPDF(): Promise<Buffer> {
     const htmlPath = path.join(__dirname, "templates", "preliminary.hbs"); // Path to your HTML file
     const htmlContent = fs.readFileSync(htmlPath, "utf-8");
-    const browser = await chromium.launch();
+
+    const chromiumPath = path.join(
+      __dirname,
+      "..",
+      "playwright",
+      ".cache",
+      "ms-playwright",
+      "chromium-1179",
+      "chrome-linux",
+      "chrome"
+    );
+     const browser = await chromium.launch({
+      headless: true,
+      executablePath: chromiumPath,
+      args: ["--no-sandbox"],
+    });
+    // const browser = await chromium.launch();
     const page = await browser.newPage();
 
     await page.setContent(htmlContent, { waitUntil: "load" });

@@ -1,37 +1,25 @@
-# Stage 1: Build the application
-FROM node:20.16.0-alpine as build
-
-# Create app directory
+# Stage 1: Base dependencies
+FROM node:20.16.0-alpine as base
 WORKDIR /app
-
-# Copy package.json and package-lock.json / yarn.lock
 COPY package*.json ./
 
-# Install dependencies
+# Stage 2: Development
+FROM base as development
 RUN npm install
-
-# Copy the entire project
 COPY . .
+CMD ["npm", "run", "start:dev"]
 
-# Build the project
+# Stage 3: Build (for production)
+FROM base as build
+RUN npm ci
+COPY . .
 RUN npm run build
 
-# Stage 2: Run the application in a smaller/production-friendly environment
+# Stage 4: Production image
 FROM node:20.16.0-alpine as production
-
 WORKDIR /app
-
-# Copy only the package.json and package-lock.json / yarn.lock
 COPY package*.json ./
-
-# Install only production dependencies
-RUN npm install --only=production
-
-# Copy build output from the 'build' stage
+RUN npm ci --omit=dev
 COPY --from=build /app/dist ./dist
-
-# Expose the port your Nest app listens on
 EXPOSE 3000
-
-# Define the command to run your app
 CMD ["node", "dist/main.js"]
