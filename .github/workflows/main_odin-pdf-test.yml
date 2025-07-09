@@ -26,8 +26,13 @@ jobs:
       - name: Install dependencies # Modified step name
         run: npm install
       
-      - name: Install Playwright browsers to project folder
-        run: PLAYWRIGHT_BROWSERS_PATH=0 npx playwright install chromium
+      - name: Install Playwright Chromium
+        run: npx playwright install chromium
+      
+      - name: Copy Chromium to project
+        run: |
+          mkdir -p ./playwright/.cache
+          cp -r ~/.cache/ms-playwright ./playwright/.cache/ms-playwright
 
       - name: Build and Test # Modified step name
         run: npm run build --if-present
