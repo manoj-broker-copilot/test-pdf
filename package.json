@@ -18,6 +18,8 @@
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
     "cli": "ts-node -r tsconfig-paths/register src/cli.ts",
+    "docker:dev": "sudo docker compose -f docker-compose.dev.yml up",
+    "docker": "sudo docker compose up",
     "seed-tax": "ts-node -r tsconfig-paths/register scripts/seed-tax-brackets.ts",
     "create-superuser": "ts-node -r tsconfig-paths/register scripts/create-superuser.ts",
     "remove-old-repeat-job": "ts-node -r tsconfig-paths/register scripts/remove-old-repeat-job.ts",
@@ -46,6 +48,7 @@
     "joi": "^17.13.3",
     "nest-commander": "^3.16.0",
     "playwright": "^1.53.2",
+    "puppeteer": "^24.12.0",
     "reflect-metadata": "^0.2.2",
     "rxjs": "^7.8.1",
     "uuid": "^11.1.0"
@@ -83,7 +86,6 @@
     "typescript": "^5.7.3",
     "typescript-eslint": "^8.20.0"
   },
-  "postinstall": "npx playwright install chromium",
   "jest": {
     "moduleFileExtensions": [
       "js",

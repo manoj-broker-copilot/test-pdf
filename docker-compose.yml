@@ -3,8 +3,8 @@ services:
   app:
     build:
       context: .
-    image: brokercopilot-backend
-    container_name: nest-app
+    image: nestpdf-ssh
+    container_name: nest-pdf-app
     env_file:
       - .env
     # This line helps the container resolve "host.docker.internal" to your host
@@ -12,4 +12,5 @@ services:
       - "host.docker.internal:host-gateway"
     ports:
       - "3000:3000"
+      - "2222:2222"
     # "depends_on" is no longer needed since there's no db service

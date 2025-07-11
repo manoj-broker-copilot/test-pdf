@@ -31,7 +31,7 @@ export class AppController {
   getTestWebhook(@Body() body: any) {
     console.log("Body:", body);
     return {
-      message: "Test webhook received",
+      message: "Test webhook received v2",
       body: body,
     };
   }

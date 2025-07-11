@@ -3,10 +3,10 @@ import { Module } from "@nestjs/common";
 import { AppController } from "./app.controller";
 import { AppService } from "./app.service";
 import { PdfModule } from "./infrastructure/pdf/pdf.module";
-// import { ConfigurationModule } from "./config/config.module";
+import { ConfigurationModule } from "./config/config.module";
 
 @Module({
-  imports: [PdfModule],
+  imports: [ConfigurationModule, PdfModule],
   controllers: [AppController],
   providers: [AppService],
 })

@@ -1,5 +1,6 @@
 import { Injectable } from "@nestjs/common";
 import { chromium } from "playwright";
+import * as puppeteer from "puppeteer";
 import * as fs from "fs";
 import * as path from "path";
 import * as handlebars from "handlebars";
@@ -10,22 +11,9 @@ export class PdfService {
     const htmlPath = path.join(__dirname, "templates", "preliminary.hbs"); // Path to your HTML file
     const htmlContent = fs.readFileSync(htmlPath, "utf-8");
 
-    const chromiumPath = path.join(
-      __dirname,
-      "..",
-      "playwright",
-      ".cache",
-      "ms-playwright",
-      "chromium-1179",
-      "chrome-linux",
-      "chrome"
-    );
-     const browser = await chromium.launch({
-      headless: true,
-      executablePath: chromiumPath,
-      args: ["--no-sandbox"],
+    const browser = await puppeteer.launch({
+      args: ["--no-sandbox", "--disable-setuid-sandbox"],
     });
-    // const browser = await chromium.launch();
     const page = await browser.newPage();
 
     await page.setContent(htmlContent, { waitUntil: "load" });

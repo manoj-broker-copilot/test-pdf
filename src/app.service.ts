@@ -5,7 +5,7 @@ import { PdfService } from "./infrastructure/pdf/pdf.service";
 export class AppService {
   constructor(private readonly pdfService: PdfService) {}
   getHello(): string {
-    return "Server is running...";
+    return "Server is running v2...";
   }
 
   async generatePdf(): Promise<Buffer> {
